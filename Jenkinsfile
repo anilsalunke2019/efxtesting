@@ -5,6 +5,8 @@ pipeline {
     }
     parameters {
         choice(name: "ENV", choices: ["", "ENG", "SA", "IST"])
+        extendedChoice(defaultValue: 'dev,qa', description: 'What environment(s)?', multiSelectDelimiter: ',', name: 'environments', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_MULTI_SELECT', value: 'dev,qa,int,int2,uat-prod,prd,dint-int-ca,dint-uatp-ca,dint-prd-ca,dint-int-au,dint-uatp-au,dint-prd-au,dint-int-uk,dint-uatp-uk,dint-prd-uk,dint-int-ind,dint-uatp-ind,dint-prd-ind,dint-int-lat,dint-uatp-lat,dint-prd-lat, int-eu, uat-ca, uat-uk, uat-eu, uat-au, uat-lat, uat-ind, prd-ca, prd-uk, prd-eu, prd-au, prd-ind, prd-lat', visibleItemCount: 39),
+        
     }
     environment {
         PROJECT_ID = 'ngtest-356407'
