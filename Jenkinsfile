@@ -5,11 +5,6 @@ pipeline {
     }
     parameters {
         choice(name: "ENV", choices: ["", "ENG", "SA", "IST"])
-
-        if (params.ENV=="SA")
-        choice(name: "DEPLOY_TO", choices: ["", "QA", "PROD"])
-         if (params.ENV=="ENG")
-        choice(name: "DEPLOY_TO", choices: ["", "DEV", "QA"])
     }
     environment {
         PROJECT_ID = 'ngtest-356407'
